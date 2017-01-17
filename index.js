@@ -49,7 +49,7 @@ function render (type, title, defaultValue, cb) {
 
   var opt = xtend(this)
   opt['.type'] = {'class': 'dialog-widget ' + type}
-  opt['.title'] = title
+  opt['.title'] = {_html: title}
   opt['input'] = {value: defaultValue || ''}
   if (inputPassword) {
     opt['input']['type'] = 'password'
